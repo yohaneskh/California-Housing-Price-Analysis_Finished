@@ -23,17 +23,17 @@ This repository contains an end-to-end machine learning pipeline to analyze and 
 ## C. Data Preparation & Feature Engineering
 Several key steps were performed to ensure data quality and readiness for modeling:
 
-i. Missing values imputation using `SimpleImputer (median value)` for total_bedrooms variable.
+- Missing values imputation using `SimpleImputer (median value)` for total_bedrooms variable.
 
-ii. Created a new variable named bedroom_ratio = total_bedrooms / total_rooms as Feature Engineering.
+- Created a new variable named bedroom_ratio = total_bedrooms / total_rooms as Feature Engineering.
 
-iii. Applied `winsorization` for outlier handling in numerical variables.
+- Applied `winsorization` for outlier handling in numerical variables.
 
-iv. Applied `one-hot encoding` on ocean_proximity, which is a categorical variable.
+- Applied `one-hot encoding` on ocean_proximity, which is a categorical variable.
 
-v. Used `RobustScaler` to reduce the impact of outliers as Feature Scaling.
+- Used `RobustScaler` to reduce the impact of outliers as Feature Scaling.
 
-vi. Stratified split with `80% training` and `20% testing` and `random_state=42` for Train-Test Split.
+- Stratified split with `80% training` and `20% testing` and `random_state=42` for Train-Test Split.
 
 ## D. Tools & Libraries Used
 - Python.
@@ -79,3 +79,21 @@ iii. `ocean_proximity_INLAND`.
 
 iv. `bedroom_ratio` and `population`.
 
+---
+
+## G. Additional Error Analysis
+- Error (Residual) Analysis
+- y_true vs y_pred Visualization
+
+---
+
+## G. Model Saving & Future Testing
+- Final model **(lightgbm_optuna_model)** was saved using **joblib**.
+- Validated on randomly generated test data to ensure consistency.
+
+---
+
+## H. Key Takeaways
+- Robust preprocessing and **Optuna** tuning were crucial to achieving good results.
+- **LightGBM** method proved to be the best fit for this regression problem.
+- Model interpretation via **SHAP** confirmed intuitive and reliable behavior.
