@@ -55,8 +55,27 @@ iii. LightGBM Regressor + Optuna.
 
 iv. XGBoost Regressor + Optuna.
 
-- Evaluation metrics used `MAE (Mean Absolute Error)`, `RMSE (Root Mean Squared Error)`, and `R² Score`.
+- As for Evaluation Metrics, I used:
+
+i. `MAE (Mean Absolute Error)`.
+
+ii. `RMSE (Root Mean Squared Error)`.
+
+iii. `R² Score`.
+
+- The `LightGBM Regressor with Optuna` model achieved MAE of 30k, RMSE of 45k, and R² Score of 0.84, therefore chosen as the best model.
 
 --- 
 
-## F. 
+## F. Model Interpretation using SHAP Analysis
+
+- SHAP values were calculated for the LightGBM model to explain feature importance. The top contributors to housing prices are:
+
+i. `median_income` (most influential).
+
+ii. `longitude` and `latitude`.
+
+iii. `ocean_proximity_INLAND`.
+
+iv. `bedroom_ratio` and `population`.
+
