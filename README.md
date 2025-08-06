@@ -16,3 +16,12 @@ To develop a robust regression machine learning model that accurately predicts t
 ---
 
 ## C. Tools & Libraries Used
+- Python.
+- pandas, numpy, matplotlib, seaborn.
+- scikit-learn.
+- Linear Regression, LightGBM, XGBoost, and RandomForest.
+- Optuna for hyperparameter tuning.
+- SHAP for model interpretability.
+
+- --- 
+
